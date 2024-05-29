@@ -11,6 +11,11 @@ steps:
       versionSpec: "3.x"
       addToPath: true
       architecture: "x64"
+  - bash: |
+      python -m pip install --upgrade pip
+      pip install -r requirements.txt
+    displayName: Install dependencies
+    workingDirectory: $(System.DefaultWorkingDirectory)/aula_3/app
 ## requirements, pylint, pytest
   - task: PublishTestResults@2
     inputs:
