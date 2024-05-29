@@ -18,8 +18,13 @@ steps:
     workingDirectory: $(System.DefaultWorkingDirectory)/aula_3/app
   - bash: |
       pip install pylint
-      pylint
+      pylint --ignore-patterns "test.*py" .
     displayName: Run lynt
+    workingDirectory: $(System.DefaultWorkingDirectory)/aula_3/app
+  - bash: |
+      pip install pytest
+      pytest
+    displayName: Run test
     workingDirectory: $(System.DefaultWorkingDirectory)/aula_3/app
 ## requirements, pylint, pytest
   - task: PublishTestResults@2
