@@ -18,6 +18,9 @@ def home():
 
 @app.route('/AMBIENTE')
 def env():
+    """
+    This function sets the environment.
+    """    
     return f'AMBIENTE={my_env}'
 
 @app.route('/STARTED')
