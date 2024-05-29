@@ -1,8 +1,8 @@
 """
 This function handles the root route and returns a greeting message.
 """
-from flask import Flask
 import os
+from flask import Flask
 
 app = Flask(__name__)
 

@@ -16,9 +16,14 @@ steps:
       pip install -r requirements.txt
     displayName: Install dependencies
     workingDirectory: $(System.DefaultWorkingDirectory)/aula_3/app
+  - bash: |
+      pip install pylint
+      pylint
+    displayName: Run lynt
+    workingDirectory: $(System.DefaultWorkingDirectory)/aula_3/app
 ## requirements, pylint, pytest
   - task: PublishTestResults@2
     inputs:
       testResultsFormat: 'NUnit'
-      testResultsFiles: '**/TEST-*.xml'
+      testResultsFiles: '**/test-*.xml'
       mergeTestResults: true
