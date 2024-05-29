@@ -12,3 +12,8 @@ steps:
       addToPath: true
       architecture: "x64"
 ## requirements, pylint, pytest
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'NUnit'
+      testResultsFiles: '**/TEST-*.xml'
+      mergeTestResults: true
