@@ -22,13 +22,13 @@ stages:
               python -m pip install --upgrade pip
               pip install -r requirements.txt
             displayName: Install dependencies
-            workingDirectory: $(System.DefaultWorkingDirectory)/aula_3/app
+            workingDirectory: $(System.DefaultWorkingDirectory)/aula_4/app
 
           - bash: |
               pip install pylint
               pylint --ignore-patterns "test.*py" .
             displayName: Run lint
-            workingDirectory: $(System.DefaultWorkingDirectory)/aula_3/app
+            workingDirectory: $(System.DefaultWorkingDirectory)/aula_4/app
 
           - bash: |
               pip install pytest
@@ -56,5 +56,5 @@ stages:
               command: "build"
               addPipelineData: false
               addBaseImageData: false
-              dockerFile: $(Build.Repository.LocalPath)/aula_3/app/Dockerfile
-              buildContext: $(Build.Repository.LocalPath)/aula_3/app/
+              dockerFile: $(Build.Repository.LocalPath)/aula_4/app/Dockerfile
+              buildContext: $(Build.Repository.LocalPath)/aula_4/app/
