@@ -1,0 +1,13 @@
+trigger:
+- main
+
+stages:
+- stage: buildPushImage
+jobs: 
+- job: buildPushImage
+steps: 
+- checkout: self
+
+
+- stage: deploy
+dependsOn: buildPushImage
