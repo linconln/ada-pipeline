@@ -12,7 +12,7 @@ minio_host = os.environ['MINIO_SVC_SERVICE_HOST']
 minio_port = os.environ['MINIO_SVC_SERVICE_PORT']
 minio_endpoint = minio_host+":"+minio_port
 
-print("conectando no rabbitmq...")
+print("conectando no rabbitmq...", rabbitmq_host)
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
     host = rabbitmq_host
@@ -44,7 +44,7 @@ import redis
 import io
 import os
 
-print("conectando no minio...")
+print("conectando no minio...", minio_endpoint)
 
 cliente = Minio(
     endpoint=minio_endpoint,

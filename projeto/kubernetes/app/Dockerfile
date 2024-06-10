@@ -4,4 +4,4 @@ RUN mkdir /app
 WORKDIR /app
 ADD . /app/
 RUN pip install -r requirements.txt
-CMD ["python", "/app/consumer.py"]
+CMD ["python", "consumer.py"]
