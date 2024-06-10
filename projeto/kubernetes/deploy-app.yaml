@@ -36,5 +36,5 @@ spec:
         command:
         - python
         args:
-        - producer.py
+        - consumer.py
 
