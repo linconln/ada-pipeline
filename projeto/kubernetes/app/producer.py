@@ -8,7 +8,7 @@ import os
 rabbitmq_host = os.environ['RABBIT_SVC_SERVICE_HOST']
 redis_host = os.environ['REDIS_SVC_SERVICE_HOST']
 redis_port = os.environ['REDIS_SVC_SERVICE_PORT']
-minio_host = os.environ['INIO_SVC_SERVICE_HOST']
+minio_host = os.environ['MINIO_SVC_SERVICE_HOST']
 minio_port = os.environ['MINIO_SVC_SERVICE_PORT']
 minio_endpoint = minio_host+":"+minio_port
 
