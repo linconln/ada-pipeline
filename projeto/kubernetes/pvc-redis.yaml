@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: redis-pvc
 spec:
+  storageClassName: slow
   resources:
     requests:
       storage: 1Gi

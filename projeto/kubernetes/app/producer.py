@@ -13,7 +13,7 @@ minio_host = 'minio-svc'
 minio_port = os.environ['MINIO_SVC_SERVICE_PORT']
 minio_endpoint = minio_host+":"+minio_port
 
-print("conectando no rabbimq...")
+print("conectando no rabbitmq...")
 
 connection = pika.BlockingConnection(pika.ConnectionParameters(
     host = rabbitmq_host
