@@ -11,7 +11,7 @@ print("rabbitmq_host=", rabbitmq_host, "redis_host=", redis_host)
 
 print("conectando ao rabbitmq")
 
-connection = pika.BlockingConnection(pika.ConnectionParameters(rabbitmq_host))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host=rabbitmq_host))
 
 print("conectando ao canal")
 
